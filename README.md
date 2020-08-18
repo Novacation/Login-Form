@@ -1,5 +1,5 @@
-<p align="center">
-  # Integrated Login System
+<p align="center" font-size=20>
+  Integrated Login System
 </p>
 
 
