@@ -41,11 +41,4 @@ After correctly doing all those steps:
 
 
 
-=======
-<p align="center">
-  Integrated Login System
-</p>
-
-
->>>>>>> ede776b5fd9936c280d4b55e3c0d3bdee4db08e7
 ![image](https://user-images.githubusercontent.com/47398013/90531426-6e267680-e14c-11ea-9170-f82180358444.png)
