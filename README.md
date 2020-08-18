@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # Integrated Login System
 
 
