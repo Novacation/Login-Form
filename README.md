@@ -1,4 +1,4 @@
 # Integrated Login System
 
 
-![image](https://user-images.githubusercontent.com/47398013/88927728-3cf20f00-d24e-11ea-81e9-872a44062fcc.png)
+![image](https://user-images.githubusercontent.com/47398013/90531426-6e267680-e14c-11ea-9170-f82180358444.png)
