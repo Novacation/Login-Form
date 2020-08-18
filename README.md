@@ -1,4 +1,4 @@
-<p style="text-align="center"; font-size=30; ">
+<p style="align="center"; font-size=30; ">
   Integrated Login System
 </p>
 
