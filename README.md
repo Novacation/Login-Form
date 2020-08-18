@@ -26,7 +26,7 @@ After correctly installing and configuring the MySQL, run the scripts in the /pu
 
 # ATTENTION!
 
-In the .env file, make sure you've set the DB USER and DB_PASS with the same inputs that you configured the MySQL. For example, if my user and password are respectively "root" and "123456", then you'll have to set DB_USER and DB_PASS as "root" and "123456". Otherwise, the database connection won't work.
+In the .env file, make sure you've set the DB USER and DB_PASS with the same inputs that you configured the MySQL. For example, if your user and password are respectively "root" and "123456", then you'll have to set DB_USER and DB_PASS as "root" and "123456". Otherwise, the database connection won't work.
 
 
 # FINALLY
