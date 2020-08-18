@@ -1,17 +1,33 @@
 const Db = require('./Database')
-const Form = require('./FormValidation')
+const FormValidation = require('./FormValidation')
 
-
-const signUp = async (login, password, email) => {
+const signUp = async (login, password) => {
     try {
-        let res = false
-        if (!(await isClientLogin(login))) {
 
-            res = await Db.sequelize.query("insert into `clientes` (clientLogin, clientPassword) values ('" + login + "', '" + password + "');")
-            return (res = true)
+        const response = await FormValidation.isAvaiableLogin(login)
+
+        if (response.isAvaiable) {
+            await Db.sequelize.query("insert into `clientes` (clientLogin, clientPassword) values ('" + login + "', '" + password + "');", {
+                type: Db.QueryTypes.INSERT
+            })
+
+            const clientData = await Db.sequelize.query("select clientId, clientLogin from `clientes` where clientLogin = '" + login + "';", {
+                type: Db.QueryTypes.SELECT
+            })
+
+            return {
+                access: true,
+                tokenData: {
+                    clientId: clientData[0].clientId,
+                    clientLogin: clientData[0].clientLogin
+                }
+            }
+        } else {
+            return {
+                access: false,
+                errorMessage: response.errorMsg
+            }
         }
-
-        return res
     } catch (error) {
         console.log(`Erro no signUp: ${error}`)
         return false
@@ -19,12 +35,35 @@ const signUp = async (login, password, email) => {
 }
 
 
-const signIn = async () => {
+const signIn = async (login, password) => {
+
     try {
 
+        const response = await FormValidation.isARegister(login, password)
+
+        const clientData = await Db.sequelize.query("select clientId, clientLogin from `clientes` where clientLogin = '" + login + "';", {
+            type: Db.QueryTypes.SELECT
+        })
+
+        if (response.isRegistered == false) {
+            return {
+                access: false,
+                msg: response.errorMsg
+            }
+        } else if (response.isRegistered == true) {
+            return {
+                access: true,
+                tokenData: {
+                    clientId: clientData[0].clientId,
+                    clientLogin: clientData[0].clientLogin
+                }
+            }
+        }
     } catch (error) {
         console.log(`Erro no signIn: ${error}`)
-        return false
+        return {
+            access: false
+        }
     }
 }
 

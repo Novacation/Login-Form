@@ -1,31 +1,53 @@
 const Db = require('./Database')
+const Bcrypt = require('bcrypt')
 
-const maxLoginLength = 15
-const minLoginLength = 6
+//sign-in functions
 
-const isValidLoginLength = (login) => {
-    let errorMsg = 'Login inválido'
-    let isValid = true
+const isARegister = async (login, password) => {
+    try {
 
-    if (login < minLoginLength) {
-        errorMsg += `\n\nQuantidade de caracteres inferior a ${minLoginLength}!`
-        isValid = false
-    }
+        const response = await Db.sequelize.query("select * from `clientes` where clientLogin = '" + login + "';", {
+            type: Db.QueryTypes.SELECT
+        })
 
-    if (login > maxLoginLength) {
-        errorMsg += `\n\nQuantidade de caracteres superior a ${maxLoginLength}!`
-        isValid = false
-    }
+        if (response.length > 0) {
+            const compareResponse = await Bcrypt.compare(password, response[0].clientPassword)
 
-    return {
-        isValid: isValid,
-        errorMsg: errorMsg
+            console.log('compareResponse: ' + compareResponse)
+            if (compareResponse == false) {
+
+                return {
+                    isRegistered: false,
+                    errorMsg: 'Senha incorreta!'
+                }
+            } else {
+                return {
+                    isRegistered: true
+                }
+            }
+        } else if (response.length < 0 || response.length == 0) {
+
+            return {
+                isRegistered: false,
+                errorMsg: 'Login incorreto!'
+            }
+        }
+    } catch (error) {
+        console.log(`Erro no isARegister: ${error}`)
+        return {
+            isRegistered: false,
+            errorMsg: 'Login e/ou senha inválidos!'
+        }
     }
 }
 
 
+
+//sign-up functions
+
 const isAvaiableLogin = async (login) => {
     try {
+
         let errorMsg = 'Login indisponível!'
         let isAvaiable = true
 
@@ -50,9 +72,7 @@ const isAvaiableLogin = async (login) => {
 
 
 
-
-
 module.exports = {
-    isValidLoginLength,
-
+    isARegister,
+    isAvaiableLogin
 }

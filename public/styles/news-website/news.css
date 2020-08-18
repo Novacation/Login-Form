@@ -1,0 +1,93 @@
+html,
+body {
+    width: 100vw;
+    height: 100vh;
+    font-size: 80%;
+}
+
+main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: rgb(43, 226, 119);
+    box-sizing: border-box;
+    width: 100vw;
+    height: 100vh;
+    color: whitesmoke;
+}
+
+
+main h1 {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+    font-size: 2.0rem;
+    text-align: center;
+    margin-bottom: 5rem;
+}
+
+.noSelect {
+    -webkit-touch-callout: none;
+    /* iOS Safari */
+    -webkit-user-select: none;
+    /* Safari */
+    -khtml-user-select: none;
+    /* Konqueror HTML */
+    -moz-user-select: none;
+    /* Firefox */
+    -ms-user-select: none;
+    /* Internet Explorer/Edge */
+    user-select: none;
+    /* Non-prefixed version, currently
+                                    supported by Chrome and Opera */
+}
+
+.img-container {
+    max-width: 600px;
+    width: 100%;
+    display: flex;
+    padding: 0;
+    margin-bottom: 2rem;
+}
+
+.img-container img {
+    display: block;
+    margin: auto;
+    width: 20rem;
+    height: 20rem;
+    border-radius: 200rem;
+}
+
+#txtComment {
+    border: none;
+    box-sizing: border-box;
+    max-width: 400px;
+    width: 90%;
+    padding: 1rem;
+    border-radius: 10rem;
+    margin-bottom: 2rem;
+}
+
+#txtComment,
+#btnSendComment {
+    outline-width: 0;
+}
+
+#btnSendComment {
+    box-sizing: border-box;
+    padding: 1rem;
+    max-width: 200px;
+    width: 60%;
+    border-radius: 10rem;
+    border: none;
+    background-color: white;
+    font-size: 1.3rem;
+    font-weight: lighter;
+    transition: 0.2s;
+}
+
+#btnSendComment:hover {
+    background-color: rgb(49, 49, 49);
+    color: whitesmoke;
+    cursor: pointer;
+}

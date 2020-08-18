@@ -1,0 +1,15 @@
+<main>
+    {{#if clientLogin}}
+        <h1 class="noSelect">Welcome {{clientLogin}}</h1>
+    {{/if}}
+
+    <div class="img-container">
+        <img src="/assets/card-jornal.jpg">
+    </div>
+
+    <input id="txtComment" type="text" placeholder="Comment" maxlength="50">
+
+    <button id="btnSendComment" type="button">Send</button>
+</main>
+
+<script type="text/javascript" src="/JsPage/send-comment-news.js"></script>

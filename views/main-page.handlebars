@@ -1,0 +1,34 @@
+<header class="cabecalho">
+    <nav class="navigation">
+        <div class="nav-container">
+            <h1>No Vacation</h1>
+            <button id="sign-in" type="button">Login</button>
+            <button id="sign-up" type="button">Join</button>
+            <button id="sign-out" type="button">Logout</button>
+        </div>
+    </nav>
+</header>
+
+<main>
+    <section class="card-container">
+        <div class="top-card">
+            <h2>Photos Website</h2>
+            <img id="img-btn1" src="/assets/card1.jpg">
+        </div>
+
+        <div class="bottom-card">
+            <h2>News Website</h2>
+            <img id="img-btn2" src="/assets/card-jornal.jpg">
+        </div>
+    </section>
+
+    <form style="display: none" action="/Auth/photos-website" method="POST" id="invisibleForm">
+        <input type="hidden" id="inviInput" name="inviData" />
+    </form>
+
+    <form style="display: none" action="/Auth/news-website" method="POST" id="invisibleForm2">
+        <input type="hidden" id="inviInput2" name="inviData2" />
+    </form>
+</main>
+
+<script type="text/javascript" src="/JsPage/main-page.js"></script>

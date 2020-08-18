@@ -1,1 +1,24 @@
-<h1>Access confirmed!</h1>
+<main>
+    <form {{!-- action="/Auth/check-signup" method="POST" --}} class="form clearfix">
+        <div class="header-container">
+            <img id="logo-img" src="/assets/black-and-white-bird-flying-over-the-sea-4529130.jpg" alt="logo">
+
+            <h1 class="form-title">No Vacation</h1>
+        </div>
+
+        <div class="input-container">
+            <input type="text" name="txtLogin" id="loginForm" placeholder="Login" maxlength="15" />
+
+            <input type="password" name="txtPassword" id="passwordForm" placeholder="Password" maxlength="15"
+                minlength="6" required>
+
+            <input type="password" name="txtConfirmPassword" id="confirmPasswordForm" placeholder="Confirm Password"
+                maxlength="15" minlength="6" required>
+
+            <button type="button" id="btn-signup">Sign up</button>
+            <button type="button" id="btn-signin">Sign in</button>
+        </div>
+    </form>
+</main>
+
+<script type="text/javascript" src="/JsPage/signup-form.js"></script>

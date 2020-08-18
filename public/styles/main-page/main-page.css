@@ -1,0 +1,168 @@
+*{
+    -webkit-touch-callout: none;
+    /* iOS Safari */
+    -webkit-user-select: none;
+    /* Safari */
+    -khtml-user-select: none;
+    /* Konqueror HTML */
+    -moz-user-select: none;
+    /* Firefox */
+    -ms-user-select: none;
+    /* Internet Explorer/Edge */
+    user-select: none;
+    /* Non-prefixed version, currently
+                                    supported by Chrome and Opera */
+}
+
+html {
+    font-size: 80%;
+    background-color: rgb(221, 213, 213);
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    background-image: url('/assets/flock-of-birds-917494.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center center;
+    overflow: hidden;
+}
+
+.cabecalho{
+    max-width: 100%;
+    background-color: rgb(36, 36, 36);
+}
+
+.navigation{
+    margin: 0 auto;
+    box-sizing: border-box;
+    width: 90%;
+    max-width: 800px;
+    padding: 1rem;
+}
+
+.nav-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 800px;
+}
+
+.nav-container h1{
+    font-family: monospace;
+    font-weight: 500;
+    font-size: 2rem;
+    color: whitesmoke;
+}
+
+.nav-container #sign-out,
+.nav-container #sign-up,
+.nav-container #sign-in{
+    outline-width: 0;
+    border: none;
+    padding: 0.2rem 0rem;
+    width: 5rem;
+    box-sizing: border-box;
+    border-radius: 1rem;
+    transition: ease-in-out 0.2s;
+}
+
+.nav-container #sign-in{
+    background-color: rgb(71, 145, 255);
+}
+
+.nav-container #sign-up{
+    background-color: rgb(114, 40, 184);
+}
+
+.nav-container #sign-out{
+    background-color: tomato;
+}
+
+.nav-container #sign-in:hover,
+.nav-container #sign-up:hover,
+.nav-container #sign-out:hover{
+    cursor: pointer;
+    color: whitesmoke;
+}
+
+.nav-container a{
+    font-family: monospace;
+    font-weight: 500;
+    text-decoration: none;
+    color: rgb(166, 255, 0);
+    font-size: 1.2rem;
+}
+
+.nav-container a:hover{
+    cursor: pointer;
+}
+
+main {
+    max-width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.445);
+}
+
+.card-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.top-card,
+.bottom-card{
+    display: inline-block;
+    box-sizing: border-box;
+    margin: 0rem auto 5%;
+    text-align: center;
+    
+}
+
+.top-card h2{
+    background-color: rgb(106, 0, 192);
+    color: white;
+    padding: 0.3rem;
+    margin-bottom: 0.5rem;
+}
+
+.bottom-card h2{
+    background-color: rgb(0, 153, 64);
+    color: white;
+    padding: 0.3rem;
+    margin-bottom: 0.5rem;
+}
+
+.top-card img,
+.bottom-card img{
+    display: block;
+    width: 15rem;
+    height: 15rem;
+    margin: auto;
+    border-radius: 100rem;
+    transition: 0.2s;
+}
+
+.top-card img:hover{
+    cursor: pointer;
+    box-shadow: 0px 0px 30px 0px rgb(131, 3, 250);
+}
+
+
+.bottom-card img:hover{
+    cursor: pointer;
+    box-shadow: 0px 0px 30px 0px rgb(43, 226, 119);
+}
+
+.clearfix {
+    overflow: auto;
+}

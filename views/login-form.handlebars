@@ -1,5 +1,5 @@
 <main>
-    <form action="/Auth/check-signin" method="POST" class="form clearfix">
+    <form {{!-- action="/Auth/check-signin" method="POST" --}} class="form clearfix" id="formulario">
         <div class="header-container">
             <img id="logo-img" src="/assets/black-and-white-bird-flying-over-the-sea-4529130.jpg" alt="logo">
 
@@ -7,11 +7,14 @@
         </div>
 
         <div class="input-container">
-            <input type="text" name="txtLogin" id="loginForm" placeholder="Login" />
+            <input type="text" name="txtLogin" id="loginForm" placeholder="Login" maxlength="15" minlength="6" required/>
 
-            <input type="password" name="txtPassword" id="passwordForm" placeholder="Password" />
+            <input type="password" name="txtPassword" id="passwordForm" placeholder="Password" maxlength="15" minlength="6" required/>
 
-            <button type="submit" id="btn-signin">Sign In</button>
+            <button type="button" id="btn-signin">Sign in</button>
+            <button type="button" id="btn-signup">Sign up</button>
         </div>
     </form>
 </main>
+
+<script type="text/javascript" src="/JsPage/signin-form.js"></script>
