@@ -22,7 +22,7 @@ Make sure you do have downloaded the .env file and of It's being on the project 
 
 # MySQL
 
-After correctly installing and configure the MySQL, run the scripts in the /public/SQL/System_Queries.sql file.
+After correctly installing and configuring the MySQL, run the scripts in the /public/SQL/System_Queries.sql file.
 
 # ATTENTION!
 
