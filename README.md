@@ -8,7 +8,7 @@ A system made basically by using HTML5, CSS3, JS, NODEJS and a SQL connection, w
 
 First of all, you'll need to download and configure Nodejs for making the local server up and run all the application. 
 
-. Here is a video tutorial for helping you with the Nodejs thing https://youtu.be/JINE4D0Syqw
+. Here is a video tutorial for helping you with the Nodejs thing https://youtu.be/JINE4D0Syqw (I'm not the owner of this video)
 
 . Open the CMD, to go to the project root and run npm start command.
 
