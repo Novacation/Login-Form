@@ -1,7 +1,7 @@
 # Integrated Login System
 
 
-A system made basically by using HTML5, CSS3, JS, and a SQL connection, where you can store logins with encrypted passwords and give an access token with an expiring time.
+A system made basically by using HTML5, CSS3, JS, NODEJS and a SQL connection, where you can store logins with encrypted passwords and give an access token with an expiring time.
 
 
 # Get started
