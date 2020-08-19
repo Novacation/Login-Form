@@ -31,7 +31,7 @@ In the .env file, make sure you've set the DB_USER and DB_PASS with the same inp
 
 # FINALLY
 
-After correctly doing all those steps:
+After correctly doing all those above steps:
 
 . Open the CMD, to go to the project root and type node app.js.
 
