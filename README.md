@@ -10,14 +10,14 @@ First of all, you'll need to download and configure Nodejs for making the local 
 
 . Here is a video tutorial for helping you with the Nodejs thing https://youtu.be/JINE4D0Syqw (I'm not the owner of this video)
 
-. Open the CMD, to go to the project root and run npm start command.
+. Open the CMD, then go to the project root and run npm start command.
 
 Now you have all the project dependencies installed.
 
 
 # ATTENTION!
 
-Make sure you do have downloaded the .env file and of It's being on the project root.
+Make sure you do have downloaded the .env file and that It's on the project root.
 
 
 # MySQL
@@ -31,9 +31,9 @@ In the .env file, make sure you've set the DB_USER and DB_PASS with the same inp
 
 # FINALLY
 
-After correctly doing all those above steps:
+After correctly doing all these above steps:
 
-. Open the CMD, to go to the project root and type node app.js.
+. Open the CMD, then go to the project root and type node app.js.
 
 . Open your browser and set the URL as "http://localhost:8081/Auth/main-page"
 
